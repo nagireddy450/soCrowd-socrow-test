@@ -1,0 +1,41 @@
+<div class="container live-games-page">
+  <div class="row gx-5">
+    <ng-container *ngFor="let liveGame of liveGamesData | groupByStatus : 'type'">
+    <div class="card col-4 p-0" *ngFor="let games of liveGame.value">
+      <div class="card-body"
+        [ngClass]="{
+          'in-game': games.type === 'In game',
+          'about-to-start': games.type === 'About to start',
+          ended: games.type === 'Ended'
+        }">
+        <span class="image-block">
+          <img
+            *ngIf="games.type === 'In game'"
+            src="../../../assets/sports_soccer_white.png"/>
+          <img
+            *ngIf="games.type === 'About to start'"
+            src="../../../assets/timer_white.png"/>
+          <img
+            *ngIf="games.type === 'Ended'"
+            src="../../../assets/timer_off_white.png"/>
+        </span>
+        <p class="game-status">{{ games.type }}</p>
+        <div class="row">
+          <div class="col-4 p-0">
+            <h5 class="country-code">{{ games.homeTeam }}</h5>
+            <div class="home-away-text">Home</div>
+          </div>
+          <div class="col-4 score-card p-0">
+            {{ games.homeTeamScore }}:{{ games.awayTeamScore }}
+          </div>
+          <div class="col-4 p-0">
+            <h5 class="country-code">{{ games.awayTeam }}</h5>
+            <div class="home-away-text">Away</div>
+          </div>
+        </div>
+        <div class="time-count">{{ games.timeDuration }}'</div>
+      </div>
+    </div>
+    </ng-container>
+  </div>
+</div>

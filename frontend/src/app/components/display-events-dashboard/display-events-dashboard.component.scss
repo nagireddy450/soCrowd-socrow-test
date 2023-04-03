@@ -1,0 +1,13 @@
+.events-dashboard-page {
+    padding: 43px 34px;
+}
+.nav-tabs, .nav-tabs {
+    border: none;
+}
+
+.nav-link:focus {
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom:2px solid var(--bs-link-hover-color);
+}

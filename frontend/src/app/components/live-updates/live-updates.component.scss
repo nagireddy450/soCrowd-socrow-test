@@ -1,0 +1,26 @@
+.live-updates-page {
+  font-family: "Segoe UI";
+  padding-top: 32px;
+  ul li {
+    margin-top: 10px;
+    background: #ffffff 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 16px;
+    font-family: Segoe UI !important;
+    letter-spacing: 0px;
+    color: #080808;
+    font-size: 20px;
+    line-height: 27px;
+    .time-stamp {
+      float: right;
+      letter-spacing: 0px;
+      color: #82828f;
+      font-size: 16px;
+    }
+    img {
+      margin-right: 24px;
+      width: 30px;
+      height: 30px;
+    }
+  }
+}

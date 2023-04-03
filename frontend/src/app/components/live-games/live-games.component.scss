@@ -1,0 +1,71 @@
+.live-games-page {
+  font-family: "Segoe UI";
+  padding-top: 32px;
+  color: #ffffff;
+  .card {
+    width: 291px;
+    margin: 0 16px 24px;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 16px;
+    .ended {
+      background: #4a0650e6 0% 0% no-repeat padding-box;
+      border-radius: 16px;
+      .time-count {
+        background: #a26ca7 0% 0% no-repeat padding-box;
+        border: 2px solid #a549ae;
+      }
+    }
+    .in-game {
+      background: #558c3fe6 0% 0% no-repeat padding-box;
+      border-radius: 16px;
+      .time-count {
+        background: #4a7a5f 0% 0% no-repeat padding-box;
+        border: 2px solid #49ae82;
+      }
+    }
+    .about-to-start {
+      background: #5930ace6 0% 0% no-repeat padding-box;
+      border-radius: 16px;
+      .time-count {
+        background: #a26ca7 0% 0% no-repeat padding-box;
+        border: 2px solid #a549ae;
+      }
+    }
+    .image-block {
+      display: flex;
+      justify-content: center;
+      img {
+        height: 30px;
+        width: 30px;
+      }
+    }
+    .game-status {
+      font-size: 16px;
+      font-family: "Segoe UI Italic";
+      text-align: center;
+    }
+    .country-code {
+      font-size: 28px;
+      margin-bottom: 0;
+      text-align: center;
+    }
+    .score-card {
+      font-size: 42px;
+      text-align: center;
+      line-height: 42px;
+    }
+    .home-away-text {
+      font-family: "Segoe UI Italic";
+      text-align: center;
+      font-size: 16px;
+    }
+    .time-count {
+      border-radius: 25px;
+      width: 87px;
+      height: 49px;
+      font-size: 28px;
+      text-align: center;
+      margin: 12px auto;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+<div class="live-updates-page">
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let liveUpdates of liveUpdatesData">
+      <span *ngIf="liveUpdates.type.toLowerCase() === 'score'"><img src="../../../assets/sports_soccer_black.svg"/>Goal in {{ liveUpdates.gameState.homeTeam }} vs.
+        {{ liveUpdates.gameState.awayTeam }} at {{getgoalTimeInMinutes(liveUpdates.gameState.startTime,liveUpdates.timestamp )}}': new score: {{ liveUpdates.gameState.homeTeam }}
+        {{ liveUpdates.gameState.homeTeamScore }} -
+        {{ liveUpdates.gameState.awayTeamScore }}
+        {{ liveUpdates.gameState.awayTeam }}</span>
+      <span *ngIf="liveUpdates.type.toLowerCase() === 'gamestart'"><img src="../../../assets/timer_black.svg"/> Game {{ liveUpdates.gameState.homeTeam }} vs.
+        {{ liveUpdates.gameState.awayTeam }} started</span>
+      <span *ngIf="liveUpdates.type.toLowerCase() === 'gameend'"><img src="../../../assets/timer_off_black.svg"/> Game {{ liveUpdates.gameState.homeTeam }} vs.
+        {{ liveUpdates.gameState.awayTeam }} ended at {{getgoalTimeInMinutes(liveUpdates.gameState.startTime,liveUpdates.timestamp )}}'</span>
+      <span *ngIf="liveUpdates.type.toLowerCase() === 'extratime'"><img src="../../../assets/timer_black.svg"/> Game {{ liveUpdates.gameState.homeTeam }} vs.
+        {{ liveUpdates.gameState.awayTeam }} extra time.</span>
+      <span class="time-stamp">{{liveUpdates.timestamp | date : "dd/MM/yyyy HH:MM"}}</span>
+    </li>
+  </ul>
+</div>
